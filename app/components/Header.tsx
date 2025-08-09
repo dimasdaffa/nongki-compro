@@ -10,7 +10,7 @@ const Header = () => {
     <header className="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold text-white brand-glow">
-          <i className="fas fa-gamepad mr-2"></i> Nongki
+          <i className="fas fa-gamepad mr-2"></i> NONGKI
         </Link>
         <div className="hidden md:flex items-center space-x-8">
           <Link href="#about" className="text-gray-300 hover:text-violet-400 transition">
