@@ -9,13 +9,13 @@ const About = () => {
         }}
       >
         <div className="container mx-auto px-6">
-          <h2 className="section-title">What We're About</h2>
+          <h2 className="section-title">What We&apos;re About</h2>
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="card p-8">
               <i className="fas fa-comments text-violet-400 text-5xl mb-4"></i>
               <h3 className="text-2xl font-bold mb-2">Real Conversations</h3>
               <p className="text-gray-400">
-                We're more than just LFG. We're a place for genuine connection, where you can chat about games, hobbies,
+                We&apos;re more than just LFG. We&apos;re a place for genuine connection, where you can chat about games, hobbies,
                 and life.
               </p>
             </div>

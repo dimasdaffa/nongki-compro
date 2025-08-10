@@ -28,7 +28,7 @@ const Join = () => {
       <div className="container mx-auto px-6 text-center">
         <h2 className="section-title">Become a Part of NONGKI</h2>
         <p className="max-w-2xl mx-auto text-lg text-gray-300 mb-8">
-          Ready to join? It's easy. Our Discord server is open to everyone who
+          Ready to join? It&apos;s easy. Our Discord server is open to everyone who
           shares our passion for gaming and community.
         </p>
         <div className="max-w-md mx-auto bg-gray-800 rounded-lg p-6 flex items-center justify-between">

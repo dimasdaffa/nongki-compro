@@ -46,7 +46,7 @@ const Events = () => {
                 August 22, 2025
               </p>
               <p className="text-gray-400">
-                Get ready to laugh! We're streaming a variety of Jackbox games.
+                Get ready to laugh! We&apos;re streaming a variety of Jackbox games.
                 No purchase necessary to play.
               </p>
             </div>

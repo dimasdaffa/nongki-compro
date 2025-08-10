@@ -3,152 +3,150 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Rocket, Code, Paintbrush, Mountain, Ghost, Mic } from "lucide-react";
+import { Mountain, Ghost, Mic } from "lucide-react";
 
 const features = [
-  {
-    step: "Step 1",
-    title: "Muncak Roblox Mount Prau",
-    content:
-      "Taklukkan puncak tertinggi dan selesaikan semua rintangan di server Roblox MT Prau. Cocok untuk kamu yang suka tantangan dan kerja sama tim.",
-    icon: <Mountain className="text-primary h-6 w-6" />,
-    image:
-      "https://media.discordapp.net/attachments/809387207848230922/1402359329696256162/113538270_77466101946028_1754418814586.png?ex=68998f26&is=68983da6&hm=0dea8f8d842f6068e10ff45d5b77e3f6cd07113cfb15da00a253225ec3809b49&=&format=webp&quality=lossless&width=1557&height=876",
-  },
-  {
-    step: "Step 2",
-    title: "Audisi Nyanyi",
-    content:
-      "Nyanyi Bareng di Roblox dengan teman-teman!",
-    icon: <Mic className="text-primary h-6 w-6" />,
-    image:
-      "https://media.discordapp.net/attachments/809387207848230922/1402049357171396688/IMG_6528.png?ex=6899bff7&is=68986e77&hm=818a3d83a9c113ae0145a6fe070de3efbfa976b93fb0282422cadd4195bc2040&=&format=webp&quality=lossless&width=681&height=980",
-  },
-  {
-    step: "Step 3",
-    title: "Mabar Server Horror Roblox",
-    content:
-      "Server horror Roblox yang bikin kamu merinding! Ajak teman-temanmu untuk bermain bersama dan hadapi berbagai tantangan seram.",
-    icon: <Ghost className="text-primary h-6 w-6" />,
-    image:
-      "https://media.discordapp.net/attachments/809387207848230922/1393646512356986881/74948c39-46d5-4b90-bf5c-8d391c55d69a.jpg?ex=689980b5&is=68982f35&hm=5deb1a3d37cb130c75705c2e80ed79abe30419898517b6744738deaa7675e8dc&=&format=webp&width=550&height=309",
-  },
+	{
+		step: "Step 1",
+		title: "Muncak Roblox Mount Prau",
+		content:
+			"Taklukkan puncak tertinggi dan selesaikan semua rintangan di server Roblox MT Prau. Cocok untuk kamu yang suka tantangan dan kerja sama tim.",
+		icon: <Mountain className="text-primary h-6 w-6" />,
+		image:
+			"https://media.discordapp.net/attachments/809387207848230922/1402359329696256162/113538270_77466101946028_1754418814586.png?ex=68998f26&is=68983da6&hm=0dea8f8d842f6068e10ff45d5b77e3f6cd07113cfb15da00a253225ec3809b49&=&format=webp&quality=lossless&width=1557&height=876",
+	},
+	{
+		step: "Step 2",
+		title: "Audisi Nyanyi",
+		content: "Nyanyi Bareng di Roblox dengan teman-teman!",
+		icon: <Mic className="text-primary h-6 w-6" />,
+		image:
+			"https://media.discordapp.net/attachments/809387207848230922/1402049357171396688/IMG_6528.png?ex=6899bff7&is=68986e77&hm=818a3d83a9c113ae0145a6fe070de3efbfa976b93fb0282422cadd4195bc2040&=&format=webp&quality=lossless&width=681&height=980",
+	},
+	{
+		step: "Step 3",
+		title: "Mabar Server Horror Roblox",
+		content:
+			"Server horror Roblox yang bikin kamu merinding! Ajak teman-temanmu untuk bermain bersama dan hadapi berbagai tantangan seram.",
+		icon: <Ghost className="text-primary h-6 w-6" />,
+		image:
+			"https://media.discordapp.net/attachments/809387207848230922/1393646512356986881/74948c39-46d5-4b90-bf5c-8d391c55d69a.jpg?ex=689980b5&is=68982f35&hm=5deb1a3d37cb130c75705c2e80ed79abe30419898517b6744738deaa7675e8dc&=&format=webp&width=550&height=309",
+	},
 ];
 
 export default function FeatureSteps() {
-  const [currentFeature, setCurrentFeature] = useState(0);
-  const [progress, setProgress] = useState(0);
+	const [currentFeature, setCurrentFeature] = useState(0);
+	const [progress, setProgress] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (progress < 100) {
-        setProgress((prev) => prev + 100 / (4000 / 100));
-      } else {
-        setCurrentFeature((prev) => (prev + 1) % features.length);
-        setProgress(0);
-      }
-    }, 100);
+	useEffect(() => {
+		const timer = setInterval(() => {
+			if (progress < 100) {
+				setProgress((prev) => prev + 100 / (4000 / 100));
+			} else {
+				setCurrentFeature((prev) => (prev + 1) % features.length);
+				setProgress(0);
+			}
+		}, 100);
 
-    return () => clearInterval(timer);
-  }, [progress]);
+		return () => clearInterval(timer);
+	}, [progress]);
 
-  return (
-    <div id="activity" className={"p-8 md:p-12"}>
-      <div className="mx-auto w-full max-w-7xl">
-        <div className="relative mx-auto mb-12 max-w-2xl sm:text-center">
-          <div className="relative z-10">
-            <h2 className="font-geist text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
-              Our Recent Activity
-            </h2>
-            <p className="font-geist text-foreground/60 mt-3">
-              Kegiatan terbaru di Nongki Community. Bergabunglah dengan kami untuk pengalaman yang lebih seru!
-            </p>
-          </div>
-          <div
-            className="absolute inset-0 mx-auto h-44 max-w-xs blur-[118px]"
-            style={{
-              background:
-                "linear-gradient(152.92deg, rgba(10,0,20,0.9) 4.54%, rgba(120,0,255,0.4) 34.2%, rgba(10,0,20,0.85) 77.55%)",
-            }}
-          ></div>
-        </div>
-        <hr className="bg-foreground/30 mx-auto mb-10 h-px w-1/2" />
+	return (
+		<div id="activity" className={"p-8 md:p-12"}>
+			<div className="mx-auto w-full max-w-7xl">
+				<div className="relative mx-auto mb-12 max-w-2xl sm:text-center">
+					<div className="relative z-10">
+						<h2 className="font-geist text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
+							Our Recent Activity
+						</h2>
+						<p className="font-geist text-foreground/60 mt-3">
+							Kegiatan terbaru di Nongki Community. Bergabunglah dengan kami untuk
+							pengalaman yang lebih seru!
+						</p>
+					</div>
+					<div
+						className="absolute inset-0 mx-auto h-44 max-w-xs blur-[118px]"
+						style={{
+							background:
+								"linear-gradient(152.92deg, rgba(10,0,20,0.9) 4.54%, rgba(120,0,255,0.4) 34.2%, rgba(10,0,20,0.85) 77.55%)",
+						}}
+					></div>
+				</div>
+				<hr className="bg-foreground/30 mx-auto mb-10 h-px w-1/2" />
 
-        <div className="flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-10">
-          <div className="order-2 space-y-8 md:order-1">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                className="flex items-center gap-6 md:gap-8"
-                initial={{ opacity: 0.3, x: -20 }}
-                animate={{
-                  opacity: index === currentFeature ? 1 : 0.3,
-                  x: 0,
-                  scale: index === currentFeature ? 1.05 : 1,
-                }}
-                transition={{ duration: 0.5 }}
-              >
-                <motion.div
-                  className={cn(
-                    "flex h-12 w-12 items-center justify-center rounded-full border-2 md:h-14 md:w-14",
-                    index === currentFeature
-                      ? "border-primary bg-primary/10 text-primary scale-110 [box-shadow:0_0_15px_rgba(192,15,102,0.3)]"
-                      : "border-muted-foreground bg-muted"
-                  )}
-                >
-                  {feature.icon}
-                </motion.div>
+				<div className="flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-10">
+					<div className="order-2 space-y-8 md:order-1">
+						{features.map((feature, index) => (
+							<motion.div
+								key={index}
+								className="flex items-center gap-6 md:gap-8"
+								initial={{ opacity: 0.3, x: -20 }}
+								animate={{
+									opacity: index === currentFeature ? 1 : 0.3,
+									x: 0,
+									scale: index === currentFeature ? 1.05 : 1,
+								}}
+								transition={{ duration: 0.5 }}
+							>
+								<motion.div
+									className={cn(
+										"flex h-12 w-12 items-center justify-center rounded-full border-2 md:h-14 md:w-14",
+										index === currentFeature
+											? "border-primary bg-primary/10 text-primary scale-110 [box-shadow:0_0_15px_rgba(192,15,102,0.3)]"
+											: "border-muted-foreground bg-muted"
+									)}
+								>
+									{feature.icon}
+								</motion.div>
 
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold md:text-2xl">
-                    {feature.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm md:text-base">
-                    {feature.content}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+								<div className="flex-1">
+									<h3 className="text-xl font-semibold md:text-2xl">
+										{feature.title}
+									</h3>
+									<p className="text-muted-foreground text-sm md:text-base">
+										{feature.content}
+									</p>
+								</div>
+							</motion.div>
+						))}
+					</div>
 
-          <div
-            className={cn(
-              "border-primary/20 relative order-1 h-[200px] overflow-hidden rounded-xl border [box-shadow:0_5px_30px_-15px_rgba(192,15,102,0.3)] md:order-2 md:h-[300px] lg:h-[400px]"
-            )}
-          >
-            <AnimatePresence mode="wait">
-              {features.map(
-                (feature, index) =>
-                  index === currentFeature && (
-                    <motion.div
-                      key={index}
-                      className="absolute inset-0 overflow-hidden rounded-lg"
-                      initial={{ y: 100, opacity: 0, rotateX: -20 }}
-                      animate={{ y: 0, opacity: 1, rotateX: 0 }}
-                      exit={{ y: -100, opacity: 0, rotateX: 20 }}
-                      transition={{ duration: 0.5, ease: "easeInOut" }}
-                    >
-                      <img
-                        src={feature.image}
-                        alt={feature.title}
-                        className="h-full w-full transform object-cover transition-transform hover:scale-105"
-                        width={1000}
-                        height={500}
-                      />
-                      <div className="from-background via-background/50 absolute right-0 bottom-0 left-0 h-2/3 bg-gradient-to-t to-transparent" />
+					<div
+						className={cn(
+							"border-primary/20 relative order-1 h-[200px] overflow-hidden rounded-xl border [box-shadow:0_5px_30px_-15px_rgba(192,15,102,0.3)] md:order-2 md:h-[300px] lg:h-[400px]"
+						)}
+					>
+						<AnimatePresence mode="wait">
+							{features.map(
+								(feature, index) =>
+									index === currentFeature && (
+										<motion.div
+											key={index}
+											className="absolute inset-0 overflow-hidden rounded-lg"
+											initial={{ y: 100, opacity: 0, rotateX: -20 }}
+											animate={{ y: 0, opacity: 1, rotateX: 0 }}
+											exit={{ y: -100, opacity: 0, rotateX: 20 }}
+											transition={{ duration: 0.5, ease: "easeInOut" }}
+										>
+											<img
+												src={feature.image}
+												alt={feature.title}
+												className="h-full w-full transform object-cover transition-transform hover:scale-105"
+											/>
+											<div className="from-background via-background/50 absolute right-0 bottom-0 left-0 h-2/3 bg-gradient-to-t to-transparent" />
 
-                      <div className="bg-background/80 absolute bottom-4 left-4 rounded-lg p-2 backdrop-blur-sm">
-                        <span className="text-primary text-xs font-medium">
-                          {feature.step}
-                        </span>
-                      </div>
-                    </motion.div>
-                  )
-              )}
-            </AnimatePresence>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+											<div className="bg-background/80 absolute bottom-4 left-4 rounded-lg p-2 backdrop-blur-sm">
+												<span className="text-primary text-xs font-medium">
+													{feature.step}
+												</span>
+											</div>
+										</motion.div>
+									)
+							)}
+						</AnimatePresence>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }

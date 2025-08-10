@@ -1,11 +1,7 @@
 import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import Navbar from "./components/Navbar"
-
-// Load the Inter font from Google Fonts
-const inter = Inter({ subsets: ["latin"] })
 
 // Define metadata for the website (SEO)
 export const metadata: Metadata = {
