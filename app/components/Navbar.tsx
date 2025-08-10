@@ -67,6 +67,13 @@ const Header = () => {
                   About Us
                 </Link>
                 <Link
+                  href="#activity"
+                  className="px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-all font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Activity
+                </Link>
+                <Link
                   href="#events"
                   className="px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-all font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
