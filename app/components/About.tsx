@@ -1,6 +1,13 @@
 const About = () => {
     return (
-      <section id="about" className="py-20 bg-gray-900">
+      <section 
+        id="about" 
+        className="py-20 bg-gray-900"
+        style={{
+          background:
+            "linear-gradient(152.92deg, rgba(10,0,20,0.9) 4.54%, rgba(120,0,255,0.4) 34.2%, rgba(10,0,20,0.85) 77.55%)",
+        }}
+      >
         <div className="container mx-auto px-6">
           <h2 className="section-title">What We're About</h2>
           <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -34,4 +41,3 @@ const About = () => {
   }
   
   export default About
-  

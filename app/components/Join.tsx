@@ -5,7 +5,7 @@ import Link from "next/link"
 
 const Join = () => {
   const [copySuccess, setCopySuccess] = useState(false)
-  const discordInviteLink = "discord.gg/YourInviteCode"
+  const discordInviteLink = "https://discord.gg/DWxQT9MN"
 
   const handleCopy = () => {
     navigator.clipboard
@@ -39,7 +39,7 @@ const Join = () => {
         <div className={`mt-4 text-green-400 transition-opacity ${copySuccess ? "opacity-100" : "opacity-0"}`}>
           Copied to clipboard!
         </div>
-        <Link href={`https://${discordInviteLink}`} target="_blank" className="btn-primary inline-block mt-8 text-lg">
+        <Link href={`https://discord.gg/DWxQT9MN`} target="_blank" className="btn-primary inline-block mt-8 text-lg">
           <i className="fab fa-discord mr-2"></i> Open Discord
         </Link>
       </div>

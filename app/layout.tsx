@@ -2,6 +2,7 @@ import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import Navbar from "./components/Navbar"
 
 // Load the Inter font from Google Fonts
 const inter = Inter({ subsets: ["latin"] })
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       {/* Font Awesome for icons */}
       <head>
+      <Navbar />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -29,7 +31,9 @@ export default function RootLayout({
           referrerPolicy="no-referrer"
         />
       </head>
-      <body className={`${inter.className} antialiased bg-gray-900 text-gray-100`}>{children}</body>
+      <body>
+          {children}
+      </body>
     </html>
   )
 }

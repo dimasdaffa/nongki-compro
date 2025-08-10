@@ -9,7 +9,7 @@ const Events = () => {
           {/* Event Card 1 */}
           <div className="card">
             <Image
-              src=""
+              src="https://ralfvanveen.com/wp-content/uploads/2021/06/Placeholder-_-Glossary.svg"
               alt="Roblox Event"
               width={600}
               height={400}
@@ -26,7 +26,7 @@ const Events = () => {
           {/* Event Card 2 */}
           <div className="card">
             <Image
-              src=""
+              src="https://ralfvanveen.com/wp-content/uploads/2021/06/Placeholder-_-Glossary.svg"
               alt="Jackbox Party Games"
               width={600}
               height={400}
@@ -43,7 +43,7 @@ const Events = () => {
           {/* Event Card 3 */}
           <div className="card">
             <Image
-              src=""
+              src="https://ralfvanveen.com/wp-content/uploads/2021/06/Placeholder-_-Glossary.svg"
               alt="Minecraft Build-off"
               width={600}
               height={400}
