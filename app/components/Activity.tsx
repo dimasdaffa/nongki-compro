@@ -3,44 +3,35 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Rocket, Code, Paintbrush } from "lucide-react";
+import { Rocket, Code, Paintbrush, Mountain, Ghost, Mic } from "lucide-react";
 
 const features = [
   {
     step: "Step 1",
-    title: "Build Faster",
+    title: "Muncak Roblox Mount Prau",
     content:
-      "Create your MVP in record time with our pre-built blocks and components.",
-    icon: <Rocket className="text-primary h-6 w-6" />,
+      "Taklukkan puncak tertinggi dan selesaikan semua rintangan di server Roblox MT Prau. Cocok untuk kamu yang suka tantangan dan kerja sama tim.",
+    icon: <Mountain className="text-primary h-6 w-6" />,
     image:
-      "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2070&auto=format&fit=crop",
+      "https://media.discordapp.net/attachments/809387207848230922/1402359329696256162/113538270_77466101946028_1754418814586.png?ex=68998f26&is=68983da6&hm=0dea8f8d842f6068e10ff45d5b77e3f6cd07113cfb15da00a253225ec3809b49&=&format=webp&quality=lossless&width=1557&height=876",
   },
   {
     step: "Step 2",
-    title: "Customize Easily",
+    title: "Audisi Nyanyi",
     content:
-      "Tailor every component to your needs with our intuitive design system and flexible architecture.",
-    icon: <Paintbrush className="text-primary h-6 w-6" />,
+      "Nyanyi Bareng di Roblox dengan teman-teman!",
+    icon: <Mic className="text-primary h-6 w-6" />,
     image:
-      "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=2070&auto=format&fit=crop",
+      "https://media.discordapp.net/attachments/809387207848230922/1402049357171396688/IMG_6528.png?ex=6899bff7&is=68986e77&hm=818a3d83a9c113ae0145a6fe070de3efbfa976b93fb0282422cadd4195bc2040&=&format=webp&quality=lossless&width=681&height=980",
   },
   {
     step: "Step 3",
-    title: "Deploy Confidently",
+    title: "Mabar Server Horror Roblox",
     content:
-      "Launch your product with confidence using our optimized, responsive, and accessible components.",
-    icon: <Code className="text-primary h-6 w-6" />,
+      "Server horror Roblox yang bikin kamu merinding! Ajak teman-temanmu untuk bermain bersama dan hadapi berbagai tantangan seram.",
+    icon: <Ghost className="text-primary h-6 w-6" />,
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    step: "Step 4",
-    title: "Add Yours!",
-    content:
-      "Contribute your own blocks and become part of the MVPBlocks community.",
-    icon: <Code className="text-primary h-6 w-6" />,
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+      "https://media.discordapp.net/attachments/809387207848230922/1393646512356986881/74948c39-46d5-4b90-bf5c-8d391c55d69a.jpg?ex=689980b5&is=68982f35&hm=5deb1a3d37cb130c75705c2e80ed79abe30419898517b6744738deaa7675e8dc&=&format=webp&width=550&height=309",
   },
 ];
 
@@ -62,7 +53,7 @@ export default function FeatureSteps() {
   }, [progress]);
 
   return (
-    <div className={"p-8 md:p-12"}>
+    <div id="activity" className={"p-8 md:p-12"}>
       <div className="mx-auto w-full max-w-7xl">
         <div className="relative mx-auto mb-12 max-w-2xl sm:text-center">
           <div className="relative z-10">
@@ -70,8 +61,7 @@ export default function FeatureSteps() {
               Our Recent Activity
             </h2>
             <p className="font-geist text-foreground/60 mt-3">
-              MVPBlocks helps you create, customize, and deploy your product
-              faster than ever before.
+              Kegiatan terbaru di Nongki Community. Bergabunglah dengan kami untuk pengalaman yang lebih seru!
             </p>
           </div>
           <div

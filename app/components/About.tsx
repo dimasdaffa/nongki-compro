@@ -5,7 +5,7 @@ const About = () => {
         className="py-20 bg-gray-900"
         style={{
           background:
-            "linear-gradient(152.92deg, rgba(10,0,20,0.9) 4.54%, rgba(120,0,255,0.4) 34.2%, rgba(10,0,20,0.85) 77.55%)",
+            "linear-gradient(152.92deg, rgba(10,0,20,0.9)",
         }}
       >
         <div className="container mx-auto px-6">
